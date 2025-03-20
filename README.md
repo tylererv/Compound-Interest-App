@@ -3,7 +3,7 @@
 '''  
 <ins>Install Dependancies from requirements files in terminal</ins>:
 
-(Backend)
+(Backend)  
 cd backend  
 pip install -r requirements.txt  
   
