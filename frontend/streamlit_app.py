@@ -77,6 +77,6 @@ with col1:
         except Exception as e:
             st.error(f"Error: {str(e)}")
 
-with col2:
+with col6:
     if st.button("♻️ Reset Values", on_click=reset_values):
         st.success("Values reset to defaults!")
