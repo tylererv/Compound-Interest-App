@@ -6,22 +6,6 @@ from pathlib import Path
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-'''
-Install Dependancies from requirements files:
-
-(Backend)
-cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-(Fronend)
-cd ../frontend
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-'''
-
 # Add project root to Python path
 project_root = Path(__file__).parent.parent
 sys.path.append(str(project_root))
@@ -30,6 +14,7 @@ from config.settings import FLASK_PORT
 
 app = Flask(__name__)
 CORS(app)
+
 
 def calculate_compound_interest(principal, years, apy):
     rate = apy / 100
