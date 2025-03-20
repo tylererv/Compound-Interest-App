@@ -1,7 +1,7 @@
 **Welcome to my Compound Interest Calculator**
 
 '''  
-Install Dependancies from requirements files in terminal:
+<ins>Install Dependancies from requirements files in terminal</ins>:
 
 (Backend)
 cd backend  
