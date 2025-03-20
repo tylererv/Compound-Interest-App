@@ -23,19 +23,19 @@ def reset_values():
     st.session_state.years = 5
     st.session_state.apy = 4.5
 
-st.title("💰 Compound Interest Calculator")
+st.title("💰 Compound Interest Calculato")
 st.markdown(f"Connected to Flask backend on port `{FLASK_PORT}`")
 
 # Input fields
 principal = st.number_input(
-    "**Initial Amount** (***$***)", 
+    "Initial Amount ($)", 
     min_value=0.0,
     step=100.0,
     key='principal'
 )
 
 years = st.number_input(
-    "**Investment Years**", 
+    "Investment Years", 
     min_value=1,
     max_value=100,
     step=1,
@@ -43,7 +43,7 @@ years = st.number_input(
 )
 
 apy = st.number_input(
-    "**Annual Yield** (***%***)", 
+    "Annual Yield (%)", 
     min_value=0.0,
     max_value=100.0,
     step=0.5,
@@ -54,7 +54,7 @@ apy = st.number_input(
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
-    if st.button("Calculate Future Value"):
+    if st.button("🧮 Calculate Future Value"):
         try:
             response = requests.post(
                 f"http://localhost:{FLASK_PORT}/calculate",
@@ -77,6 +77,6 @@ with col1:
         except Exception as e:
             st.error(f"Error: {str(e)}")
 
-with col6:
+with col2:
     if st.button("♻️ Reset Values", on_click=reset_values):
         st.success("Values reset to defaults!")
