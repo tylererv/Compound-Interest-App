@@ -5,9 +5,11 @@
 
 (Backend)  
 cd backend  
-pip install -r requirements.txt  
+pip3 install -r requirements.txt  
   
 (Frontend)  
 cd ../frontend  
-pip install -r requirements.txt  
+pip3 install -r requirements.txt  
+  
+Now run the app.py file  
 '''
