@@ -23,7 +23,7 @@ def reset_values():
     st.session_state.years = 5
     st.session_state.apy = 4.5
 
-st.title("💰 Compound Interest Calculato")
+st.title("💰 Compound Interest Calculator")
 st.markdown(f"Connected to Flask backend on port `{FLASK_PORT}`")
 
 # Input fields
